@@ -2,6 +2,11 @@
 
 This is a test of using flask with mysql.
 
+## Requirements
+
+- Python 3.9 or later
+- Docker
+
 ## Usage
 
 ### 1. Run mysql in docker
@@ -13,6 +18,8 @@ docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=example -e MYSQL_DATABA
 ### 2. Run flask app
 
 ```bash
+git clone https://github.com/kosuke-fujishiro/flask-mysql-test.git
+cd flask-mysql-test
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -23,3 +30,5 @@ python app.py
 ### 3. Test
 
 Access to http://localhost:5000/
+
+If you see "Success Connection! Current time: {current time}", it works well.
